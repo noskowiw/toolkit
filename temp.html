@@ -1,31 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Display a map on a webpage</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-<style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
-<div id="map"></div>
-<script>
-	// TO MAKE THE MAP APPEAR YOU MUST
-	// ADD YOUR ACCESS TOKEN FROM
-	// https://account.mapbox.com
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYWJvdXRhbWF6b24iLCJhIjoiY2p6MnFkZHRzMDNwYjNvbzUwZHRoZXc4NCJ9.o1G4hAqBdrylT32oYFOp7g';
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9 // starting zoom
-    });
+
+    <div class="MapboxPromo" data-module data-parsely-slot="module" data-heading-alignment="center">
+        <div class="MapboxPromo-content">
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="MapboxPromo-map">
+
+            <bsp-mapbox class="Mapbox" data-disable-zoom>
+
+                <bsp-map-filters class="Mapbox-filters" data-promo-map>
+                    <div class="Mapbox-filters-paneWrapper">
+                        <div class="Mapbox-filters-pane">
+
+                            <div class="MapFilterGroup">
+
+                                <div class="MapFilterGroup-title">
+                                    <input type="checkbox" id="MapFilterGroup_0" data-all-or-none-checkbox checked>
+                                    <label for="MapFilterGroup_0">Renewable Energy</label>
+                                </div>
+
+
+                                <div class="MapFilterGroup-items">
+
+                                    <div class="MapFilter">
+                                        <div class="MapFilter-label">
+                                            <input type="checkbox" id="MapFilter_energyType" data-all-or-none-checkbox
+                                                checked>
+                                            <label for="MapFilter_energyType">Types of Projects</label>
+                                        </div>
+
+                                        <div class="MapFilter-options">
+
+                                            <div class="MapFilter-option">
+                                                <input type="checkbox" id="MapFilter_energyType_0" name="energyType"
+                                                    value="Wind farm" checked>
+                                                <label for="MapFilter_energyType_0">Wind Farms</label>
+                                            </div>
+
+                                            <div class="MapFilter-option">
+                                                <input type="checkbox" id="MapFilter_energyType_1" name="energyType"
+                                                    value="Solar farm" checked>
+                                                <label for="MapFilter_energyType_1">Solar Farms</label>
+                                            </div>
+
+                                            <div class="MapFilter-option">
+                                                <input type="checkbox" id="MapFilter_energyType_2" name="energyType"
+                                                    value="On-site solar" checked>
+                                                <label for="MapFilter_energyType_2">On-Site Solar</label>
+                                            </div>
+
+                                            <div class="MapFilter-option">
+                                                <input type="checkbox" id="MapFilter_energyType_3" name="energyType"
+                                                    value="On-site solar - Whole Foods Market" checked>
+                                                <label for="MapFilter_energyType_3">On-Site Solar: Whole Foods
+                                                    Market</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </bsp-map-filters>
+
+
+                <div class="Mapbox-mapWrapper">
+                    <div class="Mapbox-map" id="Mapbox-00000182-3c0f-d073-ad82-fd6fad650000"
+                        data-mb-access-token="pk.eyJ1IjoiYWJvdXRhbWF6b24iLCJhIjoiY2p6MnFkZHRzMDNwYjNvbzUwZHRoZXc4NCJ9.o1G4hAqBdrylT32oYFOp7g"
+                        data-mb-username="aboutamazon" data-mb-style-id="ckonaprp11el018q6ui2webu6">
+
+
+                        <span class="MapboxDataSet" data-mb-dataset-name="renewableData"
+                            data-mb-dataset-id="ck220qkip0gr12omy65ojrupr"></span>
+
+
+                        <span class="MapboxDataSet" data-mb-dataset-name="awsData"
+                            data-mb-dataset-id="ck220eyas01822ipl8fbf764i"></span>
+
+
+
+                    </div>
+                </div>
+
+                <script class="Mapbox-popupTemplate" type="text/template" data-label-supplier="Suppliers"
+                    data-label-worker="workers" data-label-women="women" data-label-product="Product category"
+                    data-label-size="MW" data-label-in-development="In development">
+<div class="popup-title"></div>
+<div class="popup-location"></div>
+<div class="popup-attributes"><span data-map-node-icon></span></div>
+<div class="popup-participant"><span data-participant-icon></span></div>
+<div class="popup-description"></div>
 </script>
 
+                <button class="Mapbox-filters-button">Filters<svg>
+                        <use xlink:href="#icon-greater-than" />
+                    </svg></button>
+
+
+
+                <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+                <script
+                    src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.1/mapbox-gl-language.js'></script>
+            </bsp-mapbox>
+
+
+        </div>
+
+    </div>
+    <!-- <div id="map"></div> -->
+    <script
+        src="https://cdn-sustainability.aboutamazon.com/resource/00000181-8ab0-dade-ab9b-bbfd976f0000/styles/default/All.min.c7369229f29eaa821f5c4cf25873f028.gz.js"
+        async></script>
+
+        <script></script>
+        <script id="parsely-cfg" src="//cdn.parsely.com/keys/sustainability.aboutamazon.com/p.js"></script>
+        <script></script>
+    
+        <span data-bsp-pv="fa1c0a68-9427-3006-86ed-d450e3168269"></span><span
+            data-bsp-pv="00000181-f446-d9c2-a3e1-fdc664ee0001"></span>
+        <script data-bsp-site="00000181-8db1-d534-a191-cdb7d8460000"
+            data-bsp-contentid="00000181-f446-d9c2-a3e1-fdc664ee0001"></script>
+        <script data-bsp-site="00000181-8db1-d534-a191-cdb7d8460000"
+            data-bsp-contentid="00000181-f446-d9c2-a3e1-fdc664ee0001"
+            src="https://cdn-sustainability.aboutamazon.com/resource/00000181-8ab0-dade-ab9b-bbfd976f0000/_resource/analytics/bsp-analytics.min.3d492319d8b084de04ab3a208c32f0b5.gz.js"></script>
+
 </body>
+
 </html>
