@@ -838,56 +838,12 @@ https://flickity.metafizzy.co
 @media only screen and (min-width: 1360px) {
     .layoutWidth[data-width="full-constrained"],
     .LiveBlogPage-lede-content[data-width="full-constrained"],
-    .LiveBlogPage .Page-oneColumn[data-width="full-constrained"],
+    .LiveBlogPage .Page-oneColumn[data-width="full"],
     .PageListStandardJ .PageList-items[data-width="full-constrained"],
     .SearchResultsModule-topContainer[data-width="full-constrained"],
     .SearchResultsModule-wrapper[data-width="full-constrained"] {
         padding-left: calc(50% - 720px);
         padding-right: calc(50% - 720px);
-    }
-}
-body:before {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    content: "mq-xs";
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    color: transparent;
-    width: 100%;
-    height: 68px;
-    position: static;
-}
-@media only screen and (min-width: 568px) {
-    body:before {
-        content: "mq-sm";
-    }
-}
-@media only screen and (min-width: 768px) {
-    body:before {
-        content: "mq-md";
-    }
-}
-@media only screen and (min-width: 1024px) {
-    body:before {
-        content: "mq-lg";
-        height: 128px;
-    }
-}
-@media only screen and (min-width: 1280px) {
-    body:before {
-        content: "mq-hk";
-    }
-}
-@media only screen and (min-width: 1440px) {
-    body:before {
-        content: "mq-xl";
     }
 }
 [data-module] {
@@ -1870,10 +1826,10 @@ img {
 .ArticlePage .Page-subheadline {
     margin-bottom: 20px;
 }
-.ArticlePage .Page-content {
+/* .ArticlePage .Page-content {
     margin-bottom: 40px;
     margin-top: 40px;
-}
+} */
 .ArticlePage .Page-content[data-gallery-style] {
     display: block;
 }
@@ -2074,10 +2030,10 @@ img {
         max-width: 900px;
         margin-right: auto;
     }
-    .ArticlePage .Page-content {
+    /* .ArticlePage .Page-content {
         margin-top: 40px;
         margin-bottom: 40px;
-    }
+    } */
     .ArticlePage .Page-main {
         margin-left: auto;
         margin-right: auto;
@@ -2087,7 +2043,7 @@ img {
         max-width: 800px;
     }
     .ArticlePage .Page-oneColumn .Page-main {
-        max-width: 900px;
+        max-width: 100%;
     }
     .ArticlePage .Page-sponsoredBy {
         margin-left: auto;
@@ -2128,10 +2084,10 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
-    .ArticlePage .Page-content {
+    /* .ArticlePage .Page-content {
         margin-bottom: 60px;
         margin-top: 60px;
-    }
+    } */
     .ArticlePage .Page-lead {
         margin-bottom: 40px;
     }
@@ -2151,7 +2107,7 @@ img {
         margin-bottom: 60px;
     }
     .ArticlePage .Page-oneColumn .Page-main {
-        max-width: 920px;
+        max-width: 100%;
     }
 }
 @media only screen and (min-width: 1360px) {
@@ -2164,8 +2120,7 @@ img {
         margin-right: 220px;
     }
     .ArticlePage .Page-oneColumn .Page-main {
-        margin-left: 220px;
-        margin-right: 220px;
+
         max-width: none;
     }
 }
@@ -4242,12 +4197,12 @@ bsp-language {
 .LiveBlogNewPostLink svg.icon-arrow-down {
     transform: rotate(180deg);
 }
-.LiveBlogPage .Page-content {
+/* .LiveBlogPage .Page-content {
     display: grid;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-}
+} */
 .LiveBlogPage .Page-lead {
     margin-bottom: 20px;
 }
@@ -4302,10 +4257,10 @@ bsp-language {
     .LiveBlogPage-whatYouNeedToKnow {
         margin: 40px 0;
     }
-    .LiveBlogPage .Page-content {
+    /* .LiveBlogPage .Page-content {
         margin-bottom: 40px;
         margin-top: 40px;
-    }
+    } */
 }
 @media only screen and (min-width: 1024px) {
     .LiveBlogPage-layoutWrapper {
@@ -4319,20 +4274,20 @@ bsp-language {
     .LiveBlogPage-sideRail {
         border-left: 1px solid var(--color-border);
     }
-    .LiveBlogPage .Page-content {
+    /* .LiveBlogPage .Page-content {
         margin-bottom: 50px;
         margin-top: 50px;
-    }
+    } */
     .LiveBlogPage .Page-lead {
         margin-bottom: 40px;
     }
 }
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
     .LiveBlogPage .Page-content {
         padding-left: 50px;
         padding-right: 50px;
     }
-}
+} */
 @media only screen and (min-width: 1440px) {
     .LiveBlogPage-layoutWrapper {
         grid-template-columns: auto 360px;
