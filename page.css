@@ -6432,13 +6432,13 @@ a.mapboxgl-ctrl-logo.mapboxgl-compact {
         margin-right: 20px;
     }
 }
-@media only screen and (min-width: 1024px) and only screen and (max-width: 1023px) {
+/* @media only screen and (min-width: 1024px) and only screen and (max-width: 1023px) {
     [data-toggle-header="hamburger-menu"] .NavigationItem-text a,
     [data-toggle-header="hamburger-menu"] .NavigationItem-text span {
         border-bottom: 0;
         padding: 20px;
     }
-}
+} */
 .SecondLevelNavigationItem {
     position: relative;
     display: block;
