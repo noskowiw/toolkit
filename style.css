@@ -10,13 +10,13 @@ html {
 
 @font-face {
 	font-family: RocheSans;
-	src: url(/RocheSans/RocheSans-Bold.ttf);
+	src: url(toolkit/RocheSans/RocheSans-Bold.ttf);
 	font-style: bold;
 }
 
 @font-face {
 	font-family: RocheSans;
-	src: url(/RocheSans-Regular.ttf);
+	src: url(toolkit/RocheSans/RocheSans-Regular.ttf);
 	font-style: normal;
 }
 
