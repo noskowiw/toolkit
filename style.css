@@ -10,13 +10,13 @@ html {
 
 @font-face {
 	font-family: RocheSans;
-	src: url(RocheSans/RocheSans-Bold.ttf);
+	src: url(/Users/NOSKOWIW/Desktop/350a10ef-9b91-4448-bb9b-607d75954e40_Export-9c87a6b2-e889-4e9e-adb2-a4e852aed991/RocheSans/RocheSans-Bold.ttf);
 	font-style: bold;
 }
 
 @font-face {
 	font-family: RocheSans;
-	src: url(RocheSans/RocheSans-Regular.ttf);
+	src: url(/Users/NOSKOWIW/Desktop/350a10ef-9b91-4448-bb9b-607d75954e40_Export-9c87a6b2-e889-4e9e-adb2-a4e852aed991/RocheSans/RocheSans-Regular.ttf);
 	font-style: normal;
 }
 
@@ -26,7 +26,6 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #000;
 }
 @media only screen {
 	body {
@@ -509,6 +508,8 @@ blockquote {
 	font-size: 0.75em;
 	margin-top: 0.25em;
 }
+
+
 
 .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
 .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
