@@ -10,13 +10,13 @@ html {
 
 @font-face {
 	font-family: RocheSans;
-	src: url(/Users/NOSKOWIW/Desktop/350a10ef-9b91-4448-bb9b-607d75954e40_Export-9c87a6b2-e889-4e9e-adb2-a4e852aed991/RocheSans/RocheSans-Bold.ttf);
+	src: url(RocheSans/RocheSans-Bold.ttf);
 	font-style: bold;
 }
 
 @font-face {
 	font-family: RocheSans;
-	src: url(/Users/NOSKOWIW/Desktop/350a10ef-9b91-4448-bb9b-607d75954e40_Export-9c87a6b2-e889-4e9e-adb2-a4e852aed991/RocheSans/RocheSans-Regular.ttf);
+	src: url(RocheSans/RocheSans-Regular.ttf);
 	font-style: normal;
 }
 
