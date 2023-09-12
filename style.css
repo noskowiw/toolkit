@@ -26,6 +26,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	background-color: rgba(44, 45, 47, 1)
 }
 @media only screen {
 	body {
@@ -60,6 +61,8 @@ h3 {
 	margin-bottom: 0;
 	font-family: RocheSans;
 }
+
+
 
 .page-title {
 	font-size: 3.5rem;
@@ -296,6 +299,12 @@ ol > li {
 	margin-bottom: 0.3em;
 	white-space: nowrap;
 }
+
+.headerElem {
+	display: inline-block;
+	width: 50%;
+}
+
 
 .collection-title {
 	display: inline-block;
