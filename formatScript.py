@@ -6,6 +6,11 @@ file_img = '<figure id="327caa5a-07b8-498f-bca9-097a8a9505ce" class="image"><svg
 
 wrench_image = '<figure id="49eb8621-82bf-4807-994b-df33346adfa1" class="image"><svg width="240" height="240" viewBox="0 0 1278 1278" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M247.485 916.398C341.045 824.24 657.563 516.577 657.563 516.577C657.563 516.577 601.713 362.331 696.203 281.646C794.062 198.084 901.017 233.419 901.017 233.419L767.833 374.759L805.519 467.394L901.017 500.819L1042.79 368.074C1042.79 368.074 1065.65 511.325 989.303 572.445C864.686 672.201 756.854 611.6 756.854 611.6C756.854 611.6 447.498 922.13 351.549 1020.49C295.19 1078.27 193.066 970.001 247.485 916.398Z" stroke="#75D573" stroke-width="60" stroke-linejoin="round"/></svg></figure>'
 
+iframe = '<div class="iframe_wrapper"><iframe title="description" width="100%" height="100%"></iframe></div>'
+
+desc_start = '<dupa1></dupa1>'
+desc_end = '<dupa2></dupa2>'
+
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 for filename in os.listdir(current_dir):
@@ -16,28 +21,46 @@ for filename in os.listdir(current_dir):
         
         f = open(filename, encoding='utf-8')
         soup=bs(f, 'html.parser')
+
         stylesheet = soup.new_tag("link")
         stylesheet['rel'] = "stylesheet"
         stylesheet['href'] = "style.css"
-        soup.head.style.decompose()
-        soup.head.append(stylesheet)
+        if soup.head.style:
+            soup.head.style.decompose()
+            soup.head.append(stylesheet)
+
+        for elem in soup.find_all("p"):
+            if elem.contents:
+                if elem.contents[0]=='<descri>':
+                    elem.replaceWith(bs(desc_start, 'html.parser'))
+
+                if elem.contents[0]=='</descri>':
+                    elem.replaceWith(bs(desc_end, 'html.parser'))
+
+        
 
         for elem in soup.find_all("figure"):
-            elem.next.unwrap()
+            if elem.next.name == "div":
+                if elem.next['class'][0] == 'source':
+                    temp = bs(iframe, 'html.parser')
+                    temp.div.next['src'] = elem.next.next['href']
+                    elem.parent.insert(elem.parent.index(elem)+1, temp)
+                    elem.decompose()
+                    # print(elem.next.next['href'])
+                    # print(temp.div.next)
+
+
+            elif elem.next.name == "a":
+                elem.next.unwrap()
 
         if soup.body.div.next.name == "figure":
 
             temp = soup.body.div.next.extract()
             temp.next['style'] = 'width:240px'            
+            soup.body.header.insert(0, temp)
 
-        else: 
-
-            temp = bs(file_img, 'html.parser')
-
-        soup.body.header.insert(0, temp)
-
-        with open(filename, 'w') as ff:
-            ff.write(str(soup))
+        with open(filename, 'w', encoding='utf-8') as ff:
+            ff.write(str(soup).replace('<dupa1></dupa1>', '<><div class="source">').replace('<dupa2></dupa2>', '</div>'))
             ff.close()
         f.close()
 
