@@ -8,8 +8,8 @@ wrench_image = '<figure id="49eb8621-82bf-4807-994b-df33346adfa1" class="image">
 
 iframe = '<div class="iframe_wrapper"><iframe title="description" width="100%" height="100%"></iframe></div>'
 
-desc_start = '<dupa1></dupa1>'
-desc_end = '<dupa2></dupa2>'
+desc_start = '<d1></d1>'
+desc_end = '<d2></d2>'
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -60,7 +60,7 @@ for filename in os.listdir(current_dir):
             soup.body.header.insert(0, temp)
 
         with open(filename, 'w', encoding='utf-8') as ff:
-            ff.write(str(soup).replace('<dupa1></dupa1>', '<><div class="source">').replace('<dupa2></dupa2>', '</div>'))
+            ff.write(str(soup).replace('<d1></d1>', '<><div class="source">').replace('<d2></d2>', '</div>'))
             ff.close()
         f.close()
 
