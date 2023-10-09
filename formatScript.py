@@ -53,11 +53,15 @@ for filename in os.listdir(current_dir):
             elif elem.next.name == "a":
                 elem.next.unwrap()
 
-        if soup.body.div.next.name == "figure":
+        try:
 
-            temp = soup.body.div.next.extract()
-            temp.next['style'] = 'width:240px'            
-            soup.body.header.insert(0, temp)
+            if soup.body.div.next.name == "figure":
+
+                temp = soup.body.div.next.extract()
+                temp.next['style'] = 'width:240px'            
+                soup.body.header.insert(0, temp)
+        except:
+            pass
 
         with open(filename, 'w', encoding='utf-8') as ff:
             ff.write(str(soup).replace('<d1></d1>', '<><div class="source">').replace('<d2></d2>', '</div>'))
